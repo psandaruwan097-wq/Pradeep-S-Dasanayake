@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ප්‍රදීප් එස් දසනායක - ශිෂ්‍ය ද්වාරය</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js for Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Canvas Confetti for Fireworks -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <header>
+        <h1 class="sanskrit-greet">स्वागतम्</h1>
+        <h2>ප්‍රදීප් එස් දසනායක</h2>
+    </header>
+
+    <main>
+        <!-- Download Section -->
+        <section id="downloads">
+            <h3>නිබන්ධන (Tutes) භාගත කරගන්න</h3>
+            <div class="btn-group">
+                <a href="#" class="btn">සංස්කෘත නිබන්ධන (PDF)</a>
+                <a href="#" class="btn">පාලි නිබන්ධන (PDF)</a>
+            </div>
+        </section>
+
+        <!-- Subject Selection -->
+        <nav class="subject-nav">
+            <button onclick="showSubject('sanskrit')">සංස්කෘත</button>
+            <button onclick="showSubject('pali')">පාලි</button>
+        </nav>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard-section">
+            <h3 id="subject-title">ලකුණු පුවරුව</h3>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>නම</th>
+                        <th>ලකුණු</th>
+                        <th>තත්ත්වය (Rank)</th>
+                        <th>විස්තර</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-container">
+            <div class="chart-box">
+                <h3>පොදු ශිෂ්‍ය මට්ටම් (Pie Chart)</h3>
+                <canvas id="overallPieChart"></canvas>
+            </div>
+            <div id="individual-stat" class="chart-box" style="display:none;">
+                <h3 id="student-name-display">ශිෂ්‍ය ප්‍රගතිය</h3>
+                <canvas id="progressChart"></canvas>
+                <p id="target-info"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
